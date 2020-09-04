@@ -20,11 +20,14 @@ function App() {
         ...gastos,
         gasto
       ])
+      //resetear a false
+      setCrearGasto(false)
+
       // crear restante
       const presupuestoRestante = restante - gasto.cantidad
       setRestante(presupuestoRestante)
     }
-  }, [gasto, crearGasto, gastos,restante])
+  }, [gasto, gastos, restante])
   
 
   return (
