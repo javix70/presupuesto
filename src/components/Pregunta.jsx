@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Error from './Error'
 
-const Pregunta = () => {
+const Pregunta = ({setPresupuesto, setRestante,setMostrarPregunta}) => {
 
   const [cant, setCant] = useState(0)
   const [error, setError] = useState(false)
@@ -20,6 +20,9 @@ const Pregunta = () => {
       return
     }
     setError(false)
+    setPresupuesto(cant)
+    setRestante(cant)
+    setMostrarPregunta(false)
 
   }
   return(
